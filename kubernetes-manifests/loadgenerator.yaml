@@ -28,13 +28,13 @@ spec:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
       serviceAccountName: default
-      terminationGracePeriodSeconds: 5
+      terminationGracePeriodSeconds: 20
       restartPolicy: Always
       imagePullSecrets:
       - name: deploy-pull-harbor
       containers:
       - name: main
-        image: loadgenerator
+        image: loadgenerator:v1
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"

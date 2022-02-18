@@ -32,7 +32,7 @@ spec:
       - name: deploy-pull-harbor
       containers:
         - name: server
-          image: frontend
+          image: frontend:v1
           ports:
           - containerPort: 8080
           readinessProbe:

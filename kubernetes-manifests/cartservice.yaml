@@ -26,12 +26,12 @@ spec:
         app: cartservice
     spec:
       serviceAccountName: default
-      terminationGracePeriodSeconds: 5
+      terminationGracePeriodSeconds: 20
       imagePullSecrets:
       - name: deploy-pull-harbor
       containers:
       - name: server
-        image: cartservice
+        image: cartservice:v1
         ports:
         - containerPort: 7070
         env:

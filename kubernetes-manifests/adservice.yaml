@@ -26,12 +26,12 @@ spec:
         app: adservice
     spec:
       serviceAccountName: default
-      terminationGracePeriodSeconds: 5
+      terminationGracePeriodSeconds: 20
       imagePullSecrets:
       - name: deploy-pull-harbor
       containers:
       - name: server
-        image: adservice
+        image: adservice:v1
         ports:
         - containerPort: 9555
         env:
